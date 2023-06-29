@@ -1,0 +1,55 @@
+{
+  "title":"Learn to Spell | Pets",
+  "component": "LearnToSpell",
+  "intro":"02",
+  "pages": [
+    {
+      "name": "dog",
+      "image": "https://cdn.pixabay.com/photo/2018/07/16/15/31/dog-3542195__480.png"
+    },
+    {
+      "name": "cat",
+      "image": "https://cdn.pixabay.com/photo/2016/03/31/23/37/animal-1297724__480.png"
+    },
+    {
+      "name": "fish",
+      "image": "https://cdn.pixabay.com/photo/2012/04/13/21/31/fish-33712_1280.png"
+    },
+    {
+      "name": "parrot",
+      "image": "https://cdn.pixabay.com/photo/2016/03/31/23/37/bird-1297727_1280.png"
+    },
+    {
+      "name": "snake",
+      "image": "https://cdn.pixabay.com/photo/2014/04/03/11/55/snake-312561_1280.png"
+    },
+    {
+      "name": "iguana",
+      "image": "https://cdn.pixabay.com/photo/2016/06/15/16/41/iguana-1459316_1280.png"
+    },
+    {
+      "name": "lizard",
+      "image": "https://cdn.pixabay.com/photo/2013/07/12/16/35/gecko-151203_1280.png"
+    },
+    {
+      "name": "rabbit",
+      "image": "https://cdn.pixabay.com/photo/2019/03/19/06/48/graphic-4064917_1280.png"
+    },
+    {
+      "name": "chicken",
+      "image": "https://cdn.pixabay.com/photo/2017/02/01/11/25/animal-2029774_1280.png"
+    },
+    {
+      "name": "turkey",
+      "image": "https://cdn.pixabay.com/photo/2016/04/01/09/08/turkey-1299176_1280.png"
+    },
+    {
+      "name": "duck",
+      "image": "https://cdn.pixabay.com/photo/2017/01/31/13/28/animal-2024030_1280.png"
+    },
+    {
+      "name": "ferret",
+      "image": "https://cdn.pixabay.com/photo/2022/07/25/16/42/ferret-7344173_1280.png"
+    }
+  ]
+}
