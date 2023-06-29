@@ -24,6 +24,8 @@ jobs:
     
     - name: Install NPM packages
       run: npm ci
+      env:
+        TOKEN: ${{ secrets.GIT_PAT_TOKEN }}
     
     - name: Build project
       run: npm run build
