@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - main
-
-permissions:
-  packages: read
-
+      
 jobs:
   build:
     name: Build
@@ -22,12 +19,11 @@ jobs:
       with:
         node-version: 18.x
         registry-url: 'https://npm.pkg.github.com'
-        scope: '@content-generators'
     
     - name: Install NPM packages
       run: npm ci
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.GIT_PAT_TOKEN }}
     
     - name: Build project
       run: npm run build
