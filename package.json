@@ -2,6 +2,7 @@
   "name": "video-content-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://content-generators.github.io/youtube-video",
   "dependencies": {
     "@content-generators/ui-components": "^1.0.1-PRE",
     "react": "^18.2.0",
