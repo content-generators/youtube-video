@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@guptasanchit90/ui-components": "1.0.1-PRE",
+    "@content-generators/ui-components": "1.0.1-PRE",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "copy_assets": "cp -R ./node_modules/@guptasanchit90/ui-components/public/ ./public/",
+    "copy_assets": "cp -R ./node_modules/@content-generators/ui-components/public/ ./public/",
     "prestart": "npm run copy_assets",
     "start": "react-scripts start",
     "prebuild": "npm run copy_assets",

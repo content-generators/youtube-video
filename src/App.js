@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { VIDEO, BITS, VIDEO_INTRO } from "@guptasanchit90/ui-components";
+import { VIDEO, BITS, VIDEO_INTRO } from "@content-generators/ui-components";
 import { useRef } from "react";
 
 function App() {
