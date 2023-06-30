@@ -15,7 +15,7 @@
     "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild":"cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./build/",
+    "postbuild":"cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
