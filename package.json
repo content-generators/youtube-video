@@ -2,7 +2,7 @@
   "name": "video-content-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://content-generators.github.io/youtube-video",
+  "homepage": ".",
   "dependencies": {
     "@content-generators/ui-components": "^1.0.1-PRE",
     "react": "^18.2.0",
@@ -10,6 +10,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "prepare": "npm update @content-generators/ui-components",
     "copy_assets": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/",
     "prestart": "npm run copy_assets",
     "start": "react-scripts start",
