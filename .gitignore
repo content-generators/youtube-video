@@ -24,5 +24,4 @@ yarn-error.log*
 
 .npmrc
 
-/public/videos
-/public/vara-fonts
+/public/assets

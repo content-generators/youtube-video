@@ -37,7 +37,7 @@ function App() {
     }
     return React.createElement(VIDEO_INTRO[`Intro_${data.intro}`], {
       ...data,
-      videoSrc: "videos/artifacts_-_23761 (1080p).mp4",
+      videoSrc: "assets/videos/artifacts_-_23761 (1080p).mp4",
       handleEvent: () => {
         setShowView("CONTENT")
       },

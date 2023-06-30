@@ -12,10 +12,10 @@
   },
   "scripts": {
     "prepare": "npm update @content-generators/ui-components",
-    "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/",
+    "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
     "start": "react-scripts start",
+    "prebuild": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
     "build": "react-scripts build",
-    "postbuild":"cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
