@@ -1,8 +1,10 @@
-import { VIDEO } from "@content-generators/ui-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const DataBuilderComponent = ({ handleData }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    title: "",
+    pages: [],
+  });
 
   return (
     <div className="p-8">
@@ -11,6 +13,7 @@ const DataBuilderComponent = ({ handleData }) => {
           Video Title
         </label>
         <input
+          id="video_title"
           type="text"
           value={data?.title}
           onChange={(e) => {
@@ -30,6 +33,7 @@ const DataBuilderComponent = ({ handleData }) => {
           Video Pages
         </label>
         <textarea
+          id="video_pages"
           value={data.pages}
           rows="15"
           onChange={(event) => {
@@ -48,8 +52,8 @@ const DataBuilderComponent = ({ handleData }) => {
       </div>
 
       <button
+        id="submit"
         onClick={() => {
-          // submit()
           const jsonData = {
             ...data,
             pages: JSON.parse(data.pages),

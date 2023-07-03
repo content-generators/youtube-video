@@ -27,25 +27,30 @@ function App() {
   };
 
   useEffect(() => {
-    if (vidRef && vidRef.current) {
+    if (data && vidRef && vidRef.current) {
       vidRef.current.startRecording();
     }
     return () => {
       vidRef.current = null;
     };
-  }, []);
+  }, [data]);
 
-  return data ? (
+  return (
     <>
       <BITS.VideoRecorder recorderRef={vidRef} waitAfter={2} />
-      {getComponent(data)}
+      {data ? (
+        <>{getComponent(data)}</>
+      ) : (
+        <DataBuilderComponent
+          handleData={(data) => {
+            setData(data);
+            if (vidRef && vidRef.current) {
+              vidRef.current.startRecording();
+            }
+          }}
+        />
+      )}
     </>
-  ) : (
-    <DataBuilderComponent
-      handleData={(data) => {
-        setData(data);
-      }}
-    />
   );
 }
 
