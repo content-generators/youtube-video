@@ -2,8 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /youtube-video
 COPY package.json /youtube-video/
-
-RUN npm config set @content-generators:registry https://npm.pkg.github.com
+COPY .npmrc /youtube-video/.npmrc
 
 RUN npm install
 
