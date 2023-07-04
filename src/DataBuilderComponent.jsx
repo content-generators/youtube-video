@@ -38,7 +38,6 @@ const DataBuilderComponent = ({ handleData }) => {
           rows="15"
           onChange={(event) => {
             try {
-              console.log(JSON.parse(event.target.value));
               setData({
                 ...data,
                 pages: event.target.value,
@@ -52,6 +51,7 @@ const DataBuilderComponent = ({ handleData }) => {
       </div>
 
       <button
+        disabled={!data || !data.title || !data.pages}
         id="submit"
         onClick={() => {
           const jsonData = {

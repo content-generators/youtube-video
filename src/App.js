@@ -30,16 +30,17 @@ function App() {
     if (data && vidRef && vidRef.current) {
       vidRef.current.startRecording();
     }
-    return () => {
-      vidRef.current = null;
-    };
   }, [data]);
 
   return (
     <>
       <BITS.VideoRecorder recorderRef={vidRef} waitAfter={2} />
       {data ? (
-        <>{getComponent(data)}</>
+        <>
+          <div className="bg-gradient-to-b from-violet-500 to-fuchsia-500 h-screen">
+            {getComponent(data)}
+          </div>
+        </>
       ) : (
         <DataBuilderComponent
           handleData={(data) => {

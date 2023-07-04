@@ -8,7 +8,7 @@ root.render(
   <CONTEXT.UiComponentContext.Provider value={{
     staticFilePath: "assets",
     tts_url_buillder: (text)=>{
-        return `http://localhost:8600/polly?text=${text}&voice=Aditi`
+        return `${process.env.REACT_APP_TTS_URL}${text}`
     }
   }}>
     {" "}
