@@ -4,7 +4,6 @@ WORKDIR /youtube-video
 COPY package.json /youtube-video/
 
 RUN npm config set @content-generators:registry https://npm.pkg.github.com
-RUN npm config set //npm.pkg.github.com/:_authToken ${GIT_PAT_TOKEN}
 
 RUN npm install
 
