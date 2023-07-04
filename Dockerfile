@@ -1,8 +1,8 @@
 FROM node:18-alpine
 
 WORKDIR /youtube-video
-COPY package.json package-lock.json /youtube-video/
-RUN npm install --production
+COPY package.json /youtube-video/
+RUN npm install
 
 COPY . /youtube-video
 
