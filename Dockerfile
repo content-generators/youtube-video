@@ -4,6 +4,9 @@ WORKDIR /youtube-video
 COPY package.json /youtube-video/
 COPY .npmrc /youtube-video/.npmrc
 
+ARG GIT_PAT_TOKEN='REPLACE_ME'
+ENV GIT_PAT_TOKEN=${GIT_PAT_TOKEN}
+
 RUN npm install
 
 COPY . /youtube-video
