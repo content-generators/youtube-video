@@ -40,4 +40,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            GIT_PAT_TOKEN=${{ secrets.GIT_PAT_TOKEN }}
+            GIT_PAT_TOKEN=${{ secrets.NODE_AUTH_TOKEN }}
