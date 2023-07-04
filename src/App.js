@@ -33,14 +33,12 @@ function App() {
   }, [data]);
 
   return (
-    <>
+    <div
+      id="video_container" className="h-screen"
+    >
       <BITS.VideoRecorder recorderRef={vidRef} waitAfter={2} />
       {data ? (
-        <>
-          <div className="bg-gradient-to-b from-violet-500 to-fuchsia-500 h-screen">
-            {getComponent(data)}
-          </div>
-        </>
+        <>{getComponent(data)}</>
       ) : (
         <DataBuilderComponent
           handleData={(data) => {
@@ -51,7 +49,7 @@ function App() {
           }}
         />
       )}
-    </>
+    </div>
   );
 }
 
