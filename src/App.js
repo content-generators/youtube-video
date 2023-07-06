@@ -14,12 +14,14 @@ function App() {
     }
     return React.createElement(VIDEO[data.pages[pageNum].component], {
       ...data.pages[pageNum],
-      handleEvent: () => {
-        if (pageNum < data.pages.length - 1) {
-          setPageNum(pageNum + 1);
-        } else {
-          if (vidRef && vidRef.current) {
-            vidRef.current.stopRecording();
+      handleEvent: (event) => {
+        if(event == "DONE"){
+          if (pageNum < data.pages.length - 1) {
+            setPageNum(pageNum + 1);
+          } else {
+            if (vidRef && vidRef.current) {
+              vidRef.current.stopRecording();
+            }
           }
         }
       },
