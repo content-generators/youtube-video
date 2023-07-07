@@ -24,15 +24,21 @@ function App() {
             }
           }
         }
+
+        if(event == "START" && pageNum==0){
+          if (vidRef && vidRef.current) {
+            vidRef.current.startRecording();
+          }
+        }
       },
     });
   };
 
-  useEffect(() => {
-    if (data && vidRef && vidRef.current) {
-      vidRef.current.startRecording();
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data && vidRef && vidRef.current) {
+  //     vidRef.current.startRecording();
+  //   }
+  // }, [data]);
 
   return (
     <div
@@ -45,9 +51,9 @@ function App() {
         <DataBuilderComponent
           handleData={(data) => {
             setData(data);
-            if (vidRef && vidRef.current) {
-              vidRef.current.startRecording();
-            }
+            // if (vidRef && vidRef.current) {
+            //   vidRef.current.startRecording();
+            // }
           }}
         />
       )}
