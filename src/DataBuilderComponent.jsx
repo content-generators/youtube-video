@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DATA_SAMPLES } from './DataSamples';
 
 const DataBuilderComponent = ({ handleData }) => {
   const [data, setData] = useState({
@@ -27,6 +28,32 @@ const DataBuilderComponent = ({ handleData }) => {
           required
         />
       </div>
+
+      <div className="my-4">
+
+        <label for="samples" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an Sample</label>
+        <select onChange={(event) => {
+          console.log(event.target.value);
+          if (event.target.value) {
+            try {
+              console.log(DATA_SAMPLES[event.target.value]);
+              setData({
+                ...data,
+                pages: JSON.stringify(DATA_SAMPLES[event.target.value], null, 4),
+              });
+            } catch (e) {
+              console.log(e);
+            }
+          }
+        }} id="samples" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="" selected>Choose a Sample</option>
+          {Object.keys(DATA_SAMPLES).map(key => {
+            return <option value={key}>{key}</option>
+          })}
+        </select>
+
+      </div>
+
 
       <div className="my-4">
         <label htmlFor="video_pages" className="block mb-2">
