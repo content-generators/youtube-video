@@ -14,9 +14,27 @@ export const DATA_SAMPLES = {
             "An iOS v15 operating system that offers a user-friendly interface and access to a variety of apps and services."
         ]
     }],
-    "LearnToSpell":[{
+    "LearnToSpell": [{
         "component": "LearnToSpell",
         "name": "dog",
         "image": "https://freesvg.org/img/Gerald-G-Dog-Simple-Drawing-1.png",
+    }],
+    "Riddle": [{
+        "component": "TextWithBackground",
+        "messages": [
+            {
+                "voice": "Arthur",
+                "content": "There once was a man so intelligent, that he was offered some information about the future. The man obviously accepted the generous offer. The devil of course didn't want the man to know it so the devil made it into a code. It said \"Tad level hell when min\" What did the letter really mean?",
+                "delay": 5
+            },
+            {
+                "voice": "Ruth",
+                "content": "hell and heaven will meet"
+            }
+        ],
+        "background": {
+            "image": "",
+            "video": "assets/videos/flying_ship.mp4"
+        }
     }]
 }
