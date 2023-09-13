@@ -36,5 +36,13 @@ export const DATA_SAMPLES = {
             "image": "",
             "video": "assets/videos/flying_ship.mp4"
         }
+    }],
+    "Mcq": [{
+        "component": "Mcq",
+        "question": "What is the fastest  land animal?",
+        "options": ["Pronghorn Antelope", "Thomson&rsquo;s Gazelle", "Lion", "Cheetah"],
+        "background":{
+            "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
+        }
     }]
 }
