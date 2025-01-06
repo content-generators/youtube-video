@@ -8,13 +8,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <CONTEXT.UiComponentContext.Provider value={{
     staticFilePath: "assets",
-    tts_url_buillder: (text, voice) => {
+    tts_url_buillder: process.env.REACT_APP_TTS_UR ? (text, voice) => {
       console.log(_.unescape(text));
       console.log(process.env.NODE_ENV);
       console.log(process.env.REACT_APP_TTS_UR);
 
       return `${process.env.REACT_APP_TTS_UR}?voice=${voice}&text=${unEscape(_.unescape(text))}`
-    }
+    } : null
   }}>
     {" "}
     <App />
