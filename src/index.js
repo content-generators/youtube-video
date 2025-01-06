@@ -10,7 +10,7 @@ root.render(
     staticFilePath: "assets",
     tts_url_buillder: (text, voice)=>{
       console.log(_.unescape(text));
-        return `http://voice_generator:8600/polly-neural?voice=${voice}&text=${unEscape(_.unescape(text))}`
+        return `http://localhost:8600/polly-neural?voice=${voice}&text=${unEscape(_.unescape(text))}`
     }
   }}>
     {" "}
