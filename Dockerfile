@@ -11,6 +11,9 @@ RUN npm install
 
 COPY . /youtube-video
 
+ARG REACT_APP_TTS_UR='REPLACE_ME'
+ENV REACT_APP_TTS_UR=${REACT_APP_TTS_UR}
+
 EXPOSE 3000
 
 CMD ["npm", "start"]
