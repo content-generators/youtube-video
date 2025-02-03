@@ -16,4 +16,4 @@ ENV REACT_APP_TTS_UR=${REACT_APP_TTS_UR}
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start-docker"]
