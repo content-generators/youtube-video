@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { VIDEO, BITS } from "@content-generators/ui-components";
-import { useRef } from "react";
+import { BITS, VIDEO } from "@content-generators/ui-components";
+import React, { useRef, useState } from "react";
 import DataBuilderComponent from "./DataBuilderComponent";
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
     return React.createElement(VIDEO[data.pages[pageNum].component], {
       ...data.pages[pageNum],
       handleEvent: (event) => {
-        if(event == "DONE"){
+        if (event === "DONE") {
           if (pageNum < data.pages.length - 1) {
             setPageNum(pageNum + 1);
           } else {
@@ -25,7 +24,7 @@ function App() {
           }
         }
 
-        if(event == "START" && pageNum==0){
+        if (event === "START" && pageNum === 0) {
           if (vidRef && vidRef.current) {
             vidRef.current.startRecording();
           }
@@ -33,12 +32,6 @@ function App() {
       },
     });
   };
-
-  // useEffect(() => {
-  //   if (data && vidRef && vidRef.current) {
-  //     vidRef.current.startRecording();
-  //   }
-  // }, [data]);
 
   return (
     <div
@@ -51,9 +44,6 @@ function App() {
         <DataBuilderComponent
           handleData={(data) => {
             setData(data);
-            // if (vidRef && vidRef.current) {
-            //   vidRef.current.startRecording();
-            // }
           }}
         />
       )}

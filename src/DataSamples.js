@@ -41,8 +41,20 @@ export const DATA_SAMPLES = {
         "component": "Mcq",
         "question": "What is the fastest  land animal?",
         "options": ["Pronghorn Antelope", "Thomson&rsquo;s Gazelle", "Lion", "Cheetah"],
-        "background":{
+        "background": {
             "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
+        }
+    }],
+    "McqFinance": [{
+        "component": "McqFinance",
+        "data": {
+            "question": "What is the main purpose of a hedge fund?",
+            "options": ["To provide guaranteed returns", "To reduce portfolio risk", "To generate returns regardless of market conditions", "To offer high liquidity"]
+        },
+        "theme": {
+            "pageBg": "bg-gradient-to-b from-gray-500 to-gray-800",
+            "optionBg": "text-white bg-gradient-to-r from-gray-800 to-gray-700",
+            "text": "text-white"
         }
     }]
 }
