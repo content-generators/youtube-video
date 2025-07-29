@@ -56,5 +56,16 @@ export const DATA_SAMPLES = {
             "optionBg": "text-white bg-gradient-to-r from-gray-800 to-gray-700",
             "text": "text-white"
         }
-    }]
+    }],
+    "SudokuVideo": [
+        {
+            "component": "SudokuVideoComponent",
+            "puzzle": "427.6..35893547612516.2374.932....7467439.25.15827439626143958774.....2338.7.246.",
+            "solution": "427861935893547612516923748932156874674398251158274396261439587749685123385712469",
+            "scale": 1.5,
+            "background": {
+                "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
+            }
+        }
+    ]
 }
