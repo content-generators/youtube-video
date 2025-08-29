@@ -4,13 +4,13 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@content-generators/ui-components": "^1.0.1-PRE",
+    "@content-generators/ui-components": "file:../ui-components",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.2.0",
     "gh-pages": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-scripts": "5.0.1",
     "underscore": "^1.13.6"
   },
@@ -33,6 +33,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "@types/underscore": "^1.13.0",
     "tailwindcss": "^3.3.2"
   },
