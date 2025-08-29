@@ -1,19 +1,33 @@
 import { CONTEXT } from "@content-generators/ui-components";
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import _ from 'underscore';
 import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+const isTtsServiceHealthy = async () => {
+  try {
+    const healthCheck = await fetch(`${process.env.REACT_APP_TTS_UR}/health-check`);
+    const healthStatus = await healthCheck.json();
+    return healthStatus && healthStatus.status === "ok";
+  } catch (e) {
+    console.error("TTS Service Health Check Failed", e);
+    return false;
+  }
+
+};
+
 root.render(
   <CONTEXT.UiComponentContext.Provider value={{
     staticFilePath: "assets",
-    tts_url_buillder: process.env.REACT_APP_TTS_UR ? (text, voice) => {
+    tts_url_buillder: process.env.REACT_APP_TTS_UR && await isTtsServiceHealthy() ? (text, voice) => {
       console.log(_.unescape(text));
       console.log(process.env.NODE_ENV);
       console.log(process.env.REACT_APP_TTS_UR);
 
-      return `${process.env.REACT_APP_TTS_UR}?voice=${voice}&text=${unEscape(_.unescape(text))}`
+      return `${process.env.REACT_APP_TTS_UR}/${process.env.REACT_APP_TTS_TYPE}?voice=${voice}&text=${unEscape(_.unescape(text))}`
+
     } : null
   }}>
     {" "}
