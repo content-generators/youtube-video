@@ -67,5 +67,31 @@ export const DATA_SAMPLES = {
                 "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
             }
         }
+    ],
+    "LinkedInCarouselSlide": [
+        {
+            "component": "LinkedInCarouselSlide",
+            "slideNumber": {
+                "current": 1,
+                "total": 5
+            },
+            "palette": {
+                "background": "#f5f5f5",
+                "text": "#333333",
+                "primary": "#0077b5",
+                "secondary": "#ffffff"
+            },
+            "author": {
+                "name": "John Doe",
+                "handle": "@johndoe",
+                "avatarUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+            },
+            "brandLogoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/LinkedIn_logo_initials.png",
+            "content": {
+                "title": "Exciting News!",
+                "body": "We are thrilled to announce our new product launch."
+            },
+            "footerText": "Learn more at our website."
+        }
     ]
 }
