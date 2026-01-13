@@ -4,13 +4,13 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@content-generators/ui-components": "file:../ui-components",
+    "@content-generators/ui-components": "file:../ui-components/out/content-generators-ui-components-local.tgz",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.2.0",
     "gh-pages": "^5.0.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-scripts": "5.0.1",
     "underscore": "^1.13.6"
   },
