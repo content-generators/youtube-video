@@ -17,7 +17,7 @@
   "scripts": {
     "prepare": "npm update @content-generators/ui-components",
     "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
-    "start": "react-scripts start",
+    "start": "rm -rf node_modules/.cache && react-scripts start",
     "prebuild": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
     "build": "react-scripts build",
     "test": "react-scripts test",
