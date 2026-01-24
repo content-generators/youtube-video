@@ -8,7 +8,7 @@ const root = createRoot(rootElement);
 
 const isTtsServiceHealthy = async () => {
   try {
-    const healthCheck = await fetch(`${process.env.REACT_APP_TTS_UR}/health-check`);
+    const healthCheck = await fetch(`${process.env.REACT_APP_VOICE_GENERATOR}/health-check`);
     const healthStatus = await healthCheck.json();
     return healthStatus && healthStatus.status === "ok";
   } catch (e) {
@@ -21,14 +21,16 @@ const isTtsServiceHealthy = async () => {
 root.render(
   <CONTEXT.UiComponentContext.Provider value={{
     staticFilePath: "assets",
-    tts_url_buillder: process.env.REACT_APP_TTS_UR && await isTtsServiceHealthy() ? (text, voice) => {
+    tts_url_buillder: process.env.REACT_APP_VOICE_GENERATOR && await isTtsServiceHealthy() ? (text, voice) => {
       console.log(_.unescape(text));
       console.log(process.env.NODE_ENV);
-      console.log(process.env.REACT_APP_TTS_UR);
+      console.log(process.env.REACT_APP_VOICE_GENERATOR);
+      
+      return `${process.env.REACT_APP_VOICE_GENERATOR}/generate?engine=neutts&voice=${voice}&text=${unEscape(_.unescape(text))}`
 
-      return `${process.env.REACT_APP_TTS_UR}/${process.env.REACT_APP_TTS_TYPE}?voice=${voice}&text=${unEscape(_.unescape(text))}`
-
-    } : null
+    } : () => {
+      console.error("Unable to load TTS Service");
+      return null}
   }}>
     {" "}
     <App />
