@@ -4,6 +4,7 @@ import DataBuilderComponent from "./DataBuilderComponent";
 
 function App() {
   const [data, setData] = useState(null);
+  const [componentReady, setComponentReady] = useState(false);
   const [pageNum, setPageNum] = useState(0);
   let vidRef = useRef();
 
@@ -11,6 +12,7 @@ function App() {
     if (!data) {
       return null;
     }
+
     return React.createElement(VIDEO[data.pages[pageNum].component], {
       ...data.pages[pageNum],
       handleEvent: (event) => {
@@ -35,15 +37,19 @@ function App() {
 
   return (
     <div
-      id="video_container" className="h-screen"
+      id="video_container" className="h-screen" style={{overflow: 'hidden'}}
     >
       <BITS.VideoRecorder recorderRef={vidRef} waitAfter={2} />
-      {data ? (
+      {data && componentReady ? (
         <>{getComponent(data)}</>
+      ) : data ? (
+        <div></div>
       ) : (
         <DataBuilderComponent
           handleData={(data) => {
             setData(data);
+            setComponentReady(false);
+            setTimeout(() => setComponentReady(true), 5000);
           }}
         />
       )}
