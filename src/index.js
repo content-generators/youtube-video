@@ -25,12 +25,16 @@ root.render(
       console.log(_.unescape(text));
       console.log(process.env.NODE_ENV);
       console.log(process.env.REACT_APP_VOICE_GENERATOR);
-      
-      return `${process.env.REACT_APP_VOICE_GENERATOR}/generate?engine=neutts&voice=${voice}&text=${unEscape(_.unescape(text))}`
+
+      const ttsEngine = window.tts_engine || 'piper'
+      const ttsVoice = window.tts_voice || voice
+
+      return `${process.env.REACT_APP_VOICE_GENERATOR}/generate?engine=${ttsEngine}&voice=${ttsVoice}&text=${unEscape(_.unescape(text))}`
 
     } : () => {
       console.error("Unable to load TTS Service");
-      return null}
+      return null
+    }
   }}>
     {" "}
     <App />
