@@ -37,14 +37,6 @@ export const DATA_SAMPLES = {
             "video": "assets/videos/flying_ship.mp4"
         }
     }],
-    "Mcq": [{
-        "component": "Mcq",
-        "question": "What is the fastest  land animal?",
-        "options": ["Pronghorn Antelope", "Thomson&rsquo;s Gazelle", "Lion", "Cheetah"],
-        "background": {
-            "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
-        }
-    }],
     "McqFinance": [{
         "component": "McqFinance",
         "data": {
@@ -93,5 +85,49 @@ export const DATA_SAMPLES = {
             },
             "footerText": "Learn more at our website."
         }
-    ]
+    ],
+    // ----------------
+    Mcq: [{
+        "component": "Mcq",
+        "delay": 1,
+        "question": "What is the primary benefit of investing in a diversified mutual fund?",
+        "options": [
+            "Higher returns with zero risk",
+            "Liquidity and ease of withdrawal",
+            "Reduced risk through portfolio diversification",
+            "Guaranteed returns with no management fees",
+        ],
+        "correctOptionIndex": 2,
+        "footer": "SUBSCRIBE FOR MORE QUIZZES",
+        "theme": "midnight"
+    }],
+    "TrueOrFalse": [{
+        "component": "TrueOrFalse",
+        "statement": "Bananas are technically berries.",
+        "isTrue": true,
+        "explanation": "In botanical terms, a berry is a fleshy fruit produced from a single ovary. This makes bananas berries, while strawberries are actually aggregate fruits!",
+        "delay": 1,
+        "theme": "nebula"
+    }],
+    Anagram: [{
+        component: "Anagram",
+        type: "word",
+        scrambled: "ENIGMA",
+        answer: "ENIGMA",
+        scrambled: "GEMANI",
+        answer: "ENIGMA",
+        hint: "A person or thing that is mysterious",
+        theme: "midnight",
+        footer: "VOCABULARY CHALLENGE",
+    }],
+    MatchingPairs: [{
+        component: "MatchingPairs",
+        title: "Match Capitals",
+        leftItems: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
+        rightItems: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
+        pairs: [[0, 2], [1, 0], [2, 3], [3, 1], [4, 4], [5, 5], [6, 6], [7, 7]],
+        theme: "midnight",
+        footer: "GEOGRAPHY CHALLENGE",
+        delay: 2
+    }],
 }
