@@ -101,13 +101,14 @@ export const DATA_SAMPLES = {
         "footer": "SUBSCRIBE FOR MORE QUIZZES",
         "theme": "midnight"
     }],
-    "TrueOrFalse": [{
-        "component": "TrueOrFalse",
-        "statement": "Bananas are technically berries.",
-        "isTrue": true,
-        "explanation": "In botanical terms, a berry is a fleshy fruit produced from a single ovary. This makes bananas berries, while strawberries are actually aggregate fruits!",
-        "delay": 1,
-        "theme": "nebula"
+    TrueOrFalse: [{
+        component: "TrueOrFalse",
+        statement: "Bananas are technically berries.",
+        isTrue: true,
+        explanation: "In botanical terms, a berry is a fleshy fruit produced from a single ovary. This makes bananas berries, while strawberries are actually aggregate fruits!",
+        delay: 1,
+        theme: "nebula",
+        footer: "SUBSCRIBE FOR MORE QUIZZES",
     }],
     Anagram: [{
         component: "Anagram",
