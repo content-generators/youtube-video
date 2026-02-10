@@ -131,4 +131,20 @@ export const DATA_SAMPLES = {
         footer: "GEOGRAPHY CHALLENGE",
         delay: 2
     }],
+    OddOneOut: [{
+        component: "OddOneOut",
+        title: "Which One Doesn't Belong?",
+        items: [
+            { emoji: "🍎", text: "Apple" },
+            { emoji: "🍌", text: "Banana" },
+            { emoji: "🥕", text: "Carrot" },
+            { emoji: "🍇", text: "Grapes" }
+        ],
+        odd_index: 2,
+        category: "Food Groups",
+        reason: "Carrot is a vegetable, while the others are fruits!",
+        theme: "midnight",
+        footer: "SUBSCRIBE FOR MORE PUZZLES",
+        delay: 1,
+    }],
 }
