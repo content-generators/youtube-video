@@ -97,7 +97,7 @@ export const DATA_SAMPLES = {
             "Reduced risk through portfolio diversification",
             "Guaranteed returns with no management fees",
         ],
-        "correctOptionIndex": 2,
+        "correct_option_index": 2,
         "footer": "SUBSCRIBE FOR MORE QUIZZES",
         "theme": "midnight"
     }],
