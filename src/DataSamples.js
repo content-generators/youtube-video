@@ -124,8 +124,8 @@ export const DATA_SAMPLES = {
     MatchingPairs: [{
         component: "MatchingPairs",
         title: "Match Capitals",
-        leftItems: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
-        rightItems: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
+        left_items: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
+        right_items: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
         pairs: [[0, 2], [1, 0], [2, 3], [3, 1], [4, 4], [5, 5], [6, 6], [7, 7]],
         theme: "midnight",
         footer: "GEOGRAPHY CHALLENGE",
