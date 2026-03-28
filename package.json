@@ -2,52 +2,39 @@
   "name": "video-content-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "type": "module",
   "dependencies": {
     "@content-generators/ui-components": "file:../ui-components/out/content-generators-ui-components-local.tgz",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.2.0",
-    "gh-pages": "^5.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-scripts": "^0.0.0",
     "underscore": "^1.13.6"
   },
   "scripts": {
     "prepare": "npm update @content-generators/ui-components",
     "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
-    "start": "rm -rf node_modules/.cache && react-scripts start",
     "prebuild": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start-docker": "npm run prepare && npm run start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "deploy": "gh-pages -d dist",
+    "start-docker": "npm run prepare && npm run dev"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/underscore": "^1.13.0",
-    "tailwindcss": "^3.3.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.3.2",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.0"
   }
 }
