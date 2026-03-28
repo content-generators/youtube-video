@@ -155,7 +155,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   '@content-generators/ui-components@file:../ui-components/out/content-generators-ui-components-local.tgz':
-    resolution: {integrity: sha512-ukfmQccryw6UlVEr1G+k4diyyQGwCpW2VyTxstP/RJ4Fruu1BeNZwaWOkyCGeVYGr/+I3wuUDmjkzyXJ1/nJXQ==, tarball: file:../ui-components/out/content-generators-ui-components-local.tgz}
+    resolution: {integrity: sha512-42Q9SBW0Z89Dii7dpGvH1dsi75nLDr/15R6fh/QeCRHsoEX7udSMzWiHgLpIl+0XCjyjCvyAIWQzYaNPBpWsqw==, tarball: file:../ui-components/out/content-generators-ui-components-local.tgz}
     version: 1.0.1-PRE.30
     peerDependencies:
       prop-types: ^15.8.1

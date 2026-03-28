@@ -13,7 +13,7 @@
     "underscore": "^1.13.6"
   },
   "scripts": {
-    "prepare": "npm update @content-generators/ui-components",
+    "prepare": "pnpm update @content-generators/ui-components",
     "prestart": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
     "prebuild": "cp -R ./node_modules/@content-generators/ui-components/dist/public/ ./public/assets",
     "dev": "vite",
@@ -21,9 +21,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
-    "start-docker": "npm run prepare && npm run dev"
+    "start-docker": "pnpm run prepare && pnpm run dev"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
