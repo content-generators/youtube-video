@@ -16,7 +16,7 @@ export const DATA_SAMPLES = {
     }],
     "LearnToSpell": [{
         "component": "LearnToSpell",
-        "name": "dog",
+        "word": "dog",
         "image": "https://freesvg.org/img/Gerald-G-Dog-Simple-Drawing-1.png",
     }],
     "Riddle": [{
@@ -147,4 +147,14 @@ export const DATA_SAMPLES = {
         footer: "SUBSCRIBE FOR MORE PUZZLES",
         delay: 1,
     }],
+    GoldAndSilverPrices: [{
+        component: "GoldSilverPrices",
+        theme: "midnight",
+        gold: 14750.3,
+        gold_previous: 14720.4,
+        silver: 231,
+        silver_previous: 238.275,
+        gold_change_percent: "0.20",
+        silver_change_percent: "-3.05"
+    }]
 }
