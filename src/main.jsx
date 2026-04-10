@@ -30,8 +30,8 @@ const initApp = async () => {
         console.log(import.meta.env.MODE);
         console.log(import.meta.env.VITE_VOICE_GENERATOR);
 
-        const ttsEngine = window.tts_engine || 'piper'
-        const ttsVoice = window.tts_voice || voice
+        const ttsEngine = window.tts_engine || 'kokoro'
+        const ttsVoice = window.tts_voice || 'af_bella'
 
         return `${import.meta.env.VITE_VOICE_GENERATOR}/generate?engine=${ttsEngine}&voice=${ttsVoice}&text=${unEscape(_.unescape(text))}`
 
