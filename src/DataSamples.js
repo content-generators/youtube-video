@@ -1,4 +1,27 @@
-export const DATA_SAMPLES = {
+export const COMMON_VIDEO_COMPONENTS = {
+    "VideoEndScreen": [{
+        "component": "VideoEndScreen",
+        "thanksMessage": "Thanks for Watching!",
+        "subscribeText": "Don't forget to like, subscribe and hit the bell icon for notifications!",
+        "channelName": "Blooming Bud Kids",
+        "delay": 0.5,
+        "theme": "midnight",
+        "isVertical": false
+    }],
+    "VideoIntermediateScreen": [{
+        "component": "VideoIntermediateScreen",
+        "title": "Up Next",
+        "subtitle": "Math Quiz Challenge",
+        "nextContent": "Test your math skills with fun questions!",
+        "duration": 5,
+        "delay": 0.5,
+        "disableTts": true,
+        "theme": "midnight",
+        "isVertical": false
+    }],
+}
+
+export const LATEST_TECH_VIDEO_COMPONENTS = {
     "MobileDetails": [{
         "component": "MobileDetails",
         "title": "Apple iPad Air 5th Gen 5G Tablet (256GB)",
@@ -14,11 +37,151 @@ export const DATA_SAMPLES = {
             "An iOS v15 operating system that offers a user-friendly interface and access to a variety of apps and services."
         ]
     }],
-    "LearnToSpell": [{
+}
+
+export const BLOOMING_BUD_VIDEO_COMPONENTS = {
+    Anagram: [{
+        component: "Anagram",
+        type: "word",
+        scrambled: "ENIGMA",
+        answer: "ENIGMA",
+        scrambled: "GEMANI",
+        answer: "ENIGMA",
+        hint: "A person or thing that is mysterious",
+        theme: "midnight",
+        footer: "VOCABULARY CHALLENGE",
+    }],
+    EmojiOddOneOut: [{
+        component: "EmojiOddOneOut",
+        title: "Find the Odd Emoji!",
+        common_emoji: "🍎",
+        odd_emoji: "🍊",
+        grid_rows: 8,
+        grid_cols: 5,
+        odd_position: 17,
+        reason: "The orange is different from all the apples!",
+        theme: "midnight",
+        footer: "SUBSCRIBE FOR MORE PUZZLES",
+        delay: 1,
+    }],
+    FillInTheBlanks: [{
+        component: "FillInTheBlanks",
+        delay: 1,
+        sentence: "The red planet in our solar system is ____.",
+        missing_word: "Mars",
+        hint: "Think of Elon Musk's goal",
+        theme: "nebula",
+        footer: "SPACE EXPLORATION",
+    }],
+    LearnToSpell: [{
         "component": "LearnToSpell",
         "word": "dog",
         "image": "https://freesvg.org/img/Gerald-G-Dog-Simple-Drawing-1.png",
     }],
+    MatchingPairs: [{
+        component: "MatchingPairs",
+        title: "Match Capitals",
+        left_items: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
+        right_items: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
+        pairs: [[0, 2], [1, 0], [2, 3], [3, 1], [4, 4], [5, 5], [6, 6], [7, 7]],
+        theme: "midnight",
+        footer: "GEOGRAPHY CHALLENGE",
+        delay: 2
+    }],
+    Mcq: [{
+        "component": "Mcq",
+        "delay": 1,
+        "question": "What is the primary benefit of investing in a diversified mutual fund?",
+        "options": [
+            "Higher returns with zero risk",
+            "Liquidity and ease of withdrawal",
+            "Reduced risk through portfolio diversification",
+            "Guaranteed returns with no management fees",
+        ],
+        "correct_option_index": 2,
+        "footer": "SUBSCRIBE FOR MORE QUIZZES",
+        "theme": "midnight"
+    }],
+    MemoryGame: [
+        {
+            "component": "MemoryGame",
+            "video_title": "Memory Game",
+            "title": "Memory Game",
+            "images": [
+                "http://mac.mini:8800/shared-data/11767.png",
+                "http://mac.mini:8800/shared-data/11761.png",
+                "http://mac.mini:8800/shared-data/11755.png",
+                "http://mac.mini:8800/shared-data/11773.png",
+                "http://mac.mini:8800/shared-data/11739.png",
+                "http://mac.mini:8800/shared-data/11737.png"
+            ],
+            "targetIndex": 1,
+            "gridColumns": 3,
+            "timerDuration": 10,
+            "rememberDuration": 10,
+            "theme": "midnight",
+            "channelName": "BloomingBud Kids",
+            "delay": 2,
+            "isLandscape": false,
+            "paths": {
+                "backup_data": "/home/node/.n8n-files/backup_data",
+                "internal_out_data": "/home/node/.n8n-files/shared_data",
+                "host_out_path": "/Users/sanchit.gupta/Software/shared_data"
+            },
+            "tts": {
+                "tts_engine": "kokoro",
+                "tts_voice": "af_heart",
+                "bb_tts_engine": "kokoro",
+                "bb_tts_voice": "af_bella",
+                "finance_tts_engine": "kokoro",
+                "finance_tts_voice": "af_bella:10,am_eric:90"
+            }
+        }
+    ],
+    OddOneOut: [{
+        component: "OddOneOut",
+        title: "Which One Doesn't Belong?",
+        items: [
+            { emoji: "🍎", text: "Apple" },
+            { emoji: "🍌", text: "Banana" },
+            { emoji: "🥕", text: "Carrot" },
+            { emoji: "🍇", text: "Grapes" }
+        ],
+        odd_index: 2,
+        category: "Food Groups",
+        reason: "Carrot is a vegetable, while the others are fruits!",
+        theme: "midnight",
+        footer: "SUBSCRIBE FOR MORE PUZZLES",
+        delay: 1,
+    }],
+    TrueOrFalse: [{
+        component: "TrueOrFalse",
+        statement: "Bananas are technically berries.",
+        isTrue: true,
+        explanation: "In botanical terms, a berry is a fleshy fruit produced from a single ovary. This makes bananas berries, while strawberries are actually aggregate fruits!",
+        delay: 1,
+        theme: "nebula",
+        footer: "SUBSCRIBE FOR MORE QUIZZES",
+    }],
+}
+
+export const WEALTH_WYNE_VIDEO_COMPONENTS = {
+    GoldAndSilverPrices: [{
+        component: "GoldSilverPrices",
+        theme: "midnight",
+        gold: 14750.3,
+        gold_previous: 14720.4,
+        silver: 231,
+        silver_previous: 238.275,
+        gold_change_percent: "0.20",
+        silver_change_percent: "-3.05"
+    }],
+}
+
+
+
+const OTHER_VIDEO_COMPONENTS = {
+
     "Riddle": [{
         "component": "TextWithBackground",
         "messages": [
@@ -87,76 +250,8 @@ export const DATA_SAMPLES = {
         }
     ],
     // ----------------
-    Mcq: [{
-        "component": "Mcq",
-        "delay": 1,
-        "question": "What is the primary benefit of investing in a diversified mutual fund?",
-        "options": [
-            "Higher returns with zero risk",
-            "Liquidity and ease of withdrawal",
-            "Reduced risk through portfolio diversification",
-            "Guaranteed returns with no management fees",
-        ],
-        "correct_option_index": 2,
-        "footer": "SUBSCRIBE FOR MORE QUIZZES",
-        "theme": "midnight"
-    }],
-    TrueOrFalse: [{
-        component: "TrueOrFalse",
-        statement: "Bananas are technically berries.",
-        isTrue: true,
-        explanation: "In botanical terms, a berry is a fleshy fruit produced from a single ovary. This makes bananas berries, while strawberries are actually aggregate fruits!",
-        delay: 1,
-        theme: "nebula",
-        footer: "SUBSCRIBE FOR MORE QUIZZES",
-    }],
-    Anagram: [{
-        component: "Anagram",
-        type: "word",
-        scrambled: "ENIGMA",
-        answer: "ENIGMA",
-        scrambled: "GEMANI",
-        answer: "ENIGMA",
-        hint: "A person or thing that is mysterious",
-        theme: "midnight",
-        footer: "VOCABULARY CHALLENGE",
-    }],
-    MatchingPairs: [{
-        component: "MatchingPairs",
-        title: "Match Capitals",
-        left_items: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
-        right_items: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
-        pairs: [[0, 2], [1, 0], [2, 3], [3, 1], [4, 4], [5, 5], [6, 6], [7, 7]],
-        theme: "midnight",
-        footer: "GEOGRAPHY CHALLENGE",
-        delay: 2
-    }],
-    OddOneOut: [{
-        component: "OddOneOut",
-        title: "Which One Doesn't Belong?",
-        items: [
-            { emoji: "🍎", text: "Apple" },
-            { emoji: "🍌", text: "Banana" },
-            { emoji: "🥕", text: "Carrot" },
-            { emoji: "🍇", text: "Grapes" }
-        ],
-        odd_index: 2,
-        category: "Food Groups",
-        reason: "Carrot is a vegetable, while the others are fruits!",
-        theme: "midnight",
-        footer: "SUBSCRIBE FOR MORE PUZZLES",
-        delay: 1,
-    }],
-    GoldAndSilverPrices: [{
-        component: "GoldSilverPrices",
-        theme: "midnight",
-        gold: 14750.3,
-        gold_previous: 14720.4,
-        silver: 231,
-        silver_previous: 238.275,
-        gold_change_percent: "0.20",
-        silver_change_percent: "-3.05"
-    }],
+
+
     MemoryGame: [
         {
             "component": "MemoryGame",
@@ -267,4 +362,13 @@ export const DATA_SAMPLES = {
             }
         }
     ]
+}
+
+
+export const DATA_SAMPLES = {
+    COMMON_VIDEO_COMPONENTS,
+    LATEST_TECH_VIDEO_COMPONENTS,
+    BLOOMING_BUD_VIDEO_COMPONENTS,
+    WEALTH_WYNE_VIDEO_COMPONENTS,
+    OTHER_VIDEO_COMPONENTS
 }
