@@ -6,7 +6,8 @@ export const COMMON_VIDEO_COMPONENTS = {
         "channelName": "Blooming Bud Kids",
         "delay": 0.5,
         "theme": "midnight",
-        "isVertical": false
+        "isVertical": true,
+        "disableTts": false
     }],
     "VideoIntermediateScreen": [{
         "component": "VideoIntermediateScreen",
@@ -15,9 +16,9 @@ export const COMMON_VIDEO_COMPONENTS = {
         "nextContent": "Test your math skills with fun questions!",
         "duration": 5,
         "delay": 0.5,
-        "disableTts": true,
+        "disableTts": false,
         "theme": "midnight",
-        "isVertical": false
+        "isVertical": true
     }],
 }
 
@@ -35,7 +36,9 @@ export const LATEST_TECH_VIDEO_COMPONENTS = {
             "A 256 GB internal storage that can store all your photos, videos, music and documents without a card slot.",
             "A non-removable Li-Po battery that can last up to 10 hours of talk time and supports 20W fast charging with a USB-C power adapter.",
             "An iOS v15 operating system that offers a user-friendly interface and access to a variety of apps and services."
-        ]
+        ],
+        "isVertical": false,
+        "disableTts": false,
     }],
 }
 
@@ -43,13 +46,14 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
     Anagram: [{
         component: "Anagram",
         type: "word",
-        scrambled: "ENIGMA",
         answer: "ENIGMA",
         scrambled: "GEMANI",
         answer: "ENIGMA",
         hint: "A person or thing that is mysterious",
         theme: "midnight",
         footer: "VOCABULARY CHALLENGE",
+        isVertical: true,
+        disableTts: false,
     }],
     EmojiOddOneOut: [{
         component: "EmojiOddOneOut",
@@ -63,6 +67,8 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
         theme: "midnight",
         footer: "SUBSCRIBE FOR MORE PUZZLES",
         delay: 1,
+        isVertical: true,
+        disableTts: false,
     }],
     FillInTheBlanks: [{
         component: "FillInTheBlanks",
@@ -72,21 +78,27 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
         hint: "Think of Elon Musk's goal",
         theme: "nebula",
         footer: "SPACE EXPLORATION",
+        isVertical: true,
+        disableTts: false,
     }],
     LearnToSpell: [{
         "component": "LearnToSpell",
         "word": "dog",
         "image": "https://freesvg.org/img/Gerald-G-Dog-Simple-Drawing-1.png",
+        "isVertical": true,
+        "disableTts": false,
     }],
     MatchingPairs: [{
         component: "MatchingPairs",
         title: "Match Capitals",
-        left_items: ["France", "Japan", "India", "Egypt", "USA", "UK", "Germany", "Italy"],
-        right_items: ["Tokyo", "Cairo", "Paris", "New Delhi", "Washington D.C.", "London", "Berlin", "Rome"],
-        pairs: [[0, 2], [1, 0], [2, 3], [3, 1], [4, 4], [5, 5], [6, 6], [7, 7]],
+        left_items: ["India", "USA", "UK"],
+        right_items: ["New Delhi", "London", "Washington D.C."],
+        pairs: [[0, 0], [1, 2], [2, 1]],
         theme: "midnight",
         footer: "GEOGRAPHY CHALLENGE",
-        delay: 2
+        delay: 2,
+        isVertical: true,
+        disableTts: false,
     }],
     Mcq: [{
         "component": "Mcq",
@@ -100,7 +112,9 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
         ],
         "correct_option_index": 2,
         "footer": "SUBSCRIBE FOR MORE QUIZZES",
-        "theme": "midnight"
+        "theme": "midnight",
+        "isVertical": true,
+        "disableTts": false,
     }],
     MemoryGame: [
         {
@@ -122,7 +136,7 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
             "theme": "midnight",
             "channelName": "BloomingBud Kids",
             "delay": 2,
-            "isLandscape": false,
+            "disableTts": false,
             "paths": {
                 "backup_data": "/home/node/.n8n-files/backup_data",
                 "internal_out_data": "/home/node/.n8n-files/shared_data",
@@ -153,6 +167,8 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
         theme: "midnight",
         footer: "SUBSCRIBE FOR MORE PUZZLES",
         delay: 1,
+        isVertical: true,
+        disableTts: false,
     }],
     TrueOrFalse: [{
         component: "TrueOrFalse",
@@ -162,6 +178,8 @@ export const BLOOMING_BUD_VIDEO_COMPONENTS = {
         delay: 1,
         theme: "nebula",
         footer: "SUBSCRIBE FOR MORE QUIZZES",
+        isVertical: true,
+        disableTts: false,
     }],
 }
 
@@ -174,14 +192,32 @@ export const WEALTH_WYNE_VIDEO_COMPONENTS = {
         silver: 231,
         silver_previous: 238.275,
         gold_change_percent: "0.20",
-        silver_change_percent: "-3.05"
+        silver_change_percent: "-3.05",
+        "isVertical": true,
+        "disableTts": false,
     }],
+    StockGrowth: [{
+        component: "StockGrowth",
+        theme: "midnight",
+        title: "How a Ten-Year Hold Doubled My Money",
+        content: "What if your money doubled over a decade?\nI put 50000 rupees into Wipro Limited.\nI held it for 10 years.\nBack then the share price was 99 rupees.\nToday it trades at 201 rupees.\nMy stake is now worth 101077 rupees.\nThat's a return of 102.15 percent.",
+        footer: "Subscribe for more investing insights.",
+        "isVertical": true,
+        "disableTts": false,
+    }],
+    PredictionMarket: [{
+        component: "PredictionMarket",
+        question: "Will Bitcoin hit $150K by end of 2026?",
+        options: ["Bullish 🐂", "Bearish 🐻"],
+        asset: "BTC",
+        timeframe: "By Dec 2026",
+        theme: "bloomberg",
+        "isVertical": true,
+        "disableTts": false,
+    }]
 }
 
-
-
 const OTHER_VIDEO_COMPONENTS = {
-
     "Riddle": [{
         "component": "TextWithBackground",
         "messages": [
@@ -198,7 +234,9 @@ const OTHER_VIDEO_COMPONENTS = {
         "background": {
             "image": "",
             "video": "assets/videos/flying_ship.mp4"
-        }
+        },
+        "isVertical": true,
+        "disableTts": false,
     }],
     "McqFinance": [{
         "component": "McqFinance",
@@ -210,7 +248,9 @@ const OTHER_VIDEO_COMPONENTS = {
             "pageBg": "bg-gradient-to-b from-gray-500 to-gray-800",
             "optionBg": "text-white bg-gradient-to-r from-gray-800 to-gray-700",
             "text": "text-white"
-        }
+        },
+        "isVertical": true,
+        "disableTts": false,
     }],
     "SudokuVideo": [
         {
@@ -220,7 +260,9 @@ const OTHER_VIDEO_COMPONENTS = {
             "scale": 1.5,
             "background": {
                 "classNames": "bg-gradient-to-b from-green-600 to-yellow-400"
-            }
+            },
+            "isVertical": true,
+            "disableTts": false,
         }
     ],
     "LinkedInCarouselSlide": [
@@ -250,7 +292,6 @@ const OTHER_VIDEO_COMPONENTS = {
         }
     ],
 }
-
 
 export const DATA_SAMPLES = {
     COMMON_VIDEO_COMPONENTS,
