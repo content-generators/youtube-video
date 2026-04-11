@@ -272,7 +272,7 @@ const DataBuilderComponent = ({ handleData }) => {
             </div>
 
             <div className={`${isVertical ? 'w-full' : 'w-[55%]'} flex flex-col gap-3 lg:gap-5 overflow-hidden`}>
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-stone-100 flex-1 flex flex-col min-h-0">
+              <div className=" max-h-[300px] bg-white rounded-lg p-4 shadow-sm border border-stone-100 flex-1 flex flex-col min-h-0">
                 <div className="flex items-center justify-between mb-2">
                   <h2 className="text-base font-medium text-stone-800">Video Sequence</h2>
                   <span className="text-xs text-stone-500">{selectedTemplates.length} pages</span>
