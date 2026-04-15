@@ -1,4 +1,15 @@
 export const COMMON_VIDEO_COMPONENTS = {
+    "VideoStartScreen": [{
+        "component": "VideoStartScreen",
+        title: "Let's Begin",
+        subtitle: "Get ready for some fun!",
+        logoUrl: "",
+        backgroundImage: "",
+        delay: 0.5,
+        theme: 'midnight',
+        isVertical: true,
+        disableTts: true,
+    }],
     "VideoEndScreen": [{
         "component": "VideoEndScreen",
         "thanksMessage": "Thanks for Watching!",
@@ -40,6 +51,42 @@ export const LATEST_TECH_VIDEO_COMPONENTS = {
         "isVertical": false,
         "disableTts": false,
     }],
+    "TechQuickSpecs": [
+        {
+            component: "TechQuickSpecs",
+            short_title: "iQOO Z11x 5G Smartphone",
+            image: "https://m.media-amazon.com/images/I/61HBOs7MdQL._SX679_.jpg",
+            attributes: [
+                { type: "processor", value: "Dimensity 7400 Turbo", description: "octa-core Dimensity 7400 Turbo chipset" },
+                { type: "battery", value: "7200mAh", description: "7200mAh battery with 6-year longevity" },
+                { type: "screen_size", value: "", description: "" },
+                { type: "screen_type", value: "", description: "" },
+                { type: "rear_camera", value: "50MP", description: "50MP Sony IMX 852 Ultra-HD AI-powered rear camera" },
+                { type: "front_camera", value: "32MP", description: "32MP front camera" },
+                { type: "charging", value: "44W Fast Charge", description: "44W FlashCharge with 25-Dimension Security Protection" },
+                { type: "ram", value: "", description: "" },
+                { type: "storage", value: "256GB", description: "256GB UFS 3.1 storage" },
+                { type: "warranty", value: "", description: "" },
+                { type: "network", value: "5G", description: "5G-ready network support" },
+                { type: "wifi", value: "", description: "" },
+                { type: "bluetooth", value: "", description: "" },
+                { type: "water_resistance", value: "IP68/IP69+", description: "IP68 and IP69+ dust/water resistance" },
+                { type: "durability", value: "Military Grade", description: "Military-grade durability" },
+                { type: "security", value: "25-Dimensional", description: "25-Dimension Security Protection with PPS support" },
+                { type: "operating_system", value: "OriginOS 6", description: "OriginOS 6 with 2-year updates and 4-year security patches" },
+                { type: "ai_features", value: "AI Captions, Creation, Transcript Assist", description: "AI-powered features for enhanced usability" },
+                { type: "cooling", value: "", description: "" },
+                { type: "speakers", value: "", description: "" },
+                { type: "microphone", value: "", description: "" },
+                { type: "sensors", value: "", description: "" },
+                { type: "nfc", value: "", description: "" },
+                { type: "color", value: "", description: "" },
+                { type: "weight", value: "", description: "" },
+                { type: "dimensions", value: "", description: "" },
+            ],
+            maxSpecs: 6,
+        }
+    ]
 }
 
 export const BLOOMING_BUD_VIDEO_COMPONENTS = {
