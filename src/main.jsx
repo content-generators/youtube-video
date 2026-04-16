@@ -10,8 +10,7 @@ const root = createRoot(rootElement);
 const isTtsServiceHealthy = async () => {
   try {
     const healthCheck = await fetch(`${import.meta.env.VITE_VOICE_GENERATOR}/health-check`);
-    const healthStatus = await healthCheck.json();
-    return healthStatus && healthStatus.status === "ok";
+    return healthCheck && healthCheck.status == 200;
   } catch (e) {
     console.error("TTS Service Health Check Failed", e);
     return false;
@@ -25,7 +24,7 @@ const initApp = async () => {
   root.render(
     <CONTEXT.UiComponentContext.Provider value={{
       staticFilePath: "assets",
-      tts_url_buillder: import.meta.env.VITE_VOICE_GENERATOR && isHealthy ? (text, voice) => {
+      tts_url_buillder: import.meta.env.VITE_VOICE_GENERATOR && isHealthy ? async (text, voice) => {
         console.log(_.unescape(text));
         console.log(import.meta.env.MODE);
         console.log(import.meta.env.VITE_VOICE_GENERATOR);
@@ -33,7 +32,30 @@ const initApp = async () => {
         const ttsEngine = window.tts_engine || 'kokoro'
         const ttsVoice = window.tts_voice || 'af_bella'
 
-        return `${import.meta.env.VITE_VOICE_GENERATOR}/generate?engine=${ttsEngine}&voice=${ttsVoice}&text=${unEscape(_.unescape(text))}`
+        const response = await fetch(import.meta.env.VITE_VOICE_GENERATOR + '/v1/audio/speech', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "model": "local_tts/kokoro",
+                "input": text,
+                "voice": ttsVoice,
+                "response_format": "wav"
+            })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`TTS Server Error (${response.status}): ${errorText}`);
+        }
+        const audioBlob = await response.blob();
+        const wavBlob = new Blob([audioBlob], { type: 'audio/wav' });
+        const audioUrl = URL.createObjectURL(wavBlob);
+        console.log("Audio generated successfully:", audioUrl);
+
+        return audioUrl;
+        // return `${import.meta.env.VITE_VOICE_GENERATOR}/generate?engine=${ttsEngine}&voice=${ttsVoice}&text=${unEscape(_.unescape(text))}`
 
       } : () => {
         console.error("Unable to load TTS Service");

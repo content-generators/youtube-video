@@ -164,7 +164,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   '@content-generators/ui-components@file:../ui-components/out/content-generators-ui-components-local.tgz':
-    resolution: {integrity: sha512-fW8SmXUTTZ5QTGs9l1YMWUzzII233FRv60oUjLRghvYN/GJiz1ceg+plcGw7JvH7c/mKx6z0o9ScuwQ8UWq4KQ==, tarball: file:../ui-components/out/content-generators-ui-components-local.tgz}
+    resolution: {integrity: sha512-zur8PxUpuMNDjzfJ9oZSIYqpRXkV6gXqkwwyq1lXiYdIGZjKPfKcTR1gQR2lCoVSbYgW37tFhJbi0SiRZ5WyCg==, tarball: file:../ui-components/out/content-generators-ui-components-local.tgz}
     version: 1.0.1-PRE.30
     peerDependencies:
       prop-types: ^15.8.1
@@ -1256,8 +1256,8 @@ packages:
   electron-to-chromium@1.5.328:
     resolution: {integrity: sha512-QNQ5l45DzYytThO21403XN3FvK0hOkWDG8viNf6jqS42msJ8I4tGDSpBCgvDRRPnkffafiwAym2X2eHeGD2V0w==}
 
-  electron-to-chromium@1.5.336:
-    resolution: {integrity: sha512-AbH9q9J455r/nLmdNZes0G0ZKcRX73FicwowalLs6ijwOmCJSRRrLX63lcAlzy9ux3dWK1w1+1nsBJEWN11hcQ==}
+  electron-to-chromium@1.5.339:
+    resolution: {integrity: sha512-Is+0BBHJ4NrdpAYiperrmp53pLywG/yV/6lIMTAnhxvzj/Cmn5Q/ogSHC6AKe7X+8kPLxxFk0cs5oc/3j/fxIg==}
 
   email-addresses@5.0.0:
     resolution: {integrity: sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw==}
@@ -3287,7 +3287,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.10.19
       caniuse-lite: 1.0.30001788
-      electron-to-chromium: 1.5.336
+      electron-to-chromium: 1.5.339
       node-releases: 2.0.37
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
@@ -3452,7 +3452,7 @@ snapshots:
 
   electron-to-chromium@1.5.328: {}
 
-  electron-to-chromium@1.5.336: {}
+  electron-to-chromium@1.5.339: {}
 
   email-addresses@5.0.0: {}
 
